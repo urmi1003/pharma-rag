@@ -1,17 +1,13 @@
 import fitz
 
-# PDF path
 pdf_path = "data/drugs_medicine.pdf"
 
-# open PDF
 doc = fitz.open(pdf_path)
 
-# print total pages
-print("Total pages:", len(doc))
+full_text = ""
 
-# read first page
-page = doc.load_page(0)
-text = page.get_text()
+# loop through all pages
+for page in doc:
+    full_text += page.get_text()
 
-print("\nFirst page text:\n")
-print(text[:500])  # print first 500 characters
+print("Total characters:", len(full_text))
