@@ -1,0 +1,10 @@
+pymupdf
+langchain
+sentence-transformers
+pinecone-client
+transformers
+torch
+fastapi
+uvicorn
+ragas
+python-dotenv
